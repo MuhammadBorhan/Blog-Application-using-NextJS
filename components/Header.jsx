@@ -4,12 +4,12 @@ import React from "react";
 export const Header = () => {
   return (
     <header className="bg-gray-50">
-      <div className="flex flex-col items-center sm:flex-row sm:justify-between text-center py-4 px-12 gap-y-3 sm:gap-y-0">
+      <div className="container mx-auto flex flex-col items-center sm:flex-row sm:justify-between text-center py-4 gap-y-3 sm:gap-y-0">
         <div>
           <input type="text" className="input-text" placeholder="Search..." />
         </div>
         <div>
-          <h2 className="font-bold text-3xl uppercase">Design</h2>
+          <h2 className="font-bold text-3xl uppercase sm:mr-24">Design</h2>
         </div>
         <div className="flex gap-4 text-gray-500 cursor-pointer">
           <a>
