@@ -1,3 +1,4 @@
+import { Facebook, GitHub, Instagram, LinkedIn } from "@mui/icons-material";
 import React from "react";
 
 export const Footer = () => {
@@ -18,6 +19,20 @@ export const Footer = () => {
           </div>
         </div>
         <div>
+          <div className="flex justify-center mb-2 gap-4 text-gray-500 cursor-pointer">
+            <a>
+              <Facebook />
+            </a>
+            <a>
+              <GitHub />
+            </a>
+            <a>
+              <LinkedIn />
+            </a>
+            <a>
+              <Instagram />
+            </a>
+          </div>
           <p className="text-gray-500">
             {" "}
             Copyright &copy; {new Date().getFullYear()} All Rights Reserved By

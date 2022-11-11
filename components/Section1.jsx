@@ -16,15 +16,17 @@ const Section1 = () => {
   swiperCore.use(Autoplay);
   return (
     <section className="py-12">
-      <div className="container mx-auto md:px-20">
-        <h1 className="font-bold text-4xl pb-10 text-center">Trending</h1>
+      <Link href={"/posts/page"}>
+        <div className="container mx-auto md:px-20">
+          <h1 className="font-bold text-4xl pb-10 text-center">Trending</h1>
 
-        <Swiper slidesPerView={1} loop={true} autoplay={{ delay: 2000 }}>
-          <SwiperSlide>{slide(image1)}</SwiperSlide>
-          <SwiperSlide>{slide(image1)}</SwiperSlide>
-          <SwiperSlide>{slide(image1)}</SwiperSlide>
-        </Swiper>
-      </div>
+          <Swiper slidesPerView={1} loop={true} autoplay={{ delay: 2000 }}>
+            <SwiperSlide>{slide(image1)}</SwiperSlide>
+            <SwiperSlide>{slide(image1)}</SwiperSlide>
+            <SwiperSlide>{slide(image1)}</SwiperSlide>
+          </Swiper>
+        </div>
+      </Link>
     </section>
   );
 };
