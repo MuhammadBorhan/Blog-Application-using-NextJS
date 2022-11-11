@@ -3,13 +3,27 @@ import { Avatar } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import image1 from "../public/images/flower2.webp";
+import image2 from "../public/images/flower1.jpg";
+import image3 from "../public/images/flower3.jpg";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import swiperCore, { Autoplay } from "swiper";
 
 const Section1 = () => {
+  swiperCore.use(Autoplay);
   return (
     <section className="py-12">
       <div className="container mx-auto md:px-20">
         <h1 className="font-bold text-4xl pb-10 text-center">Trending</h1>
-        {slide()}
+
+        <Swiper slidesPerView={1} loop={true} autoplay={{ delay: 2000 }}>
+          <SwiperSlide>{slide(image1)}</SwiperSlide>
+          <SwiperSlide>{slide(image2)}</SwiperSlide>
+          <SwiperSlide>{slide(image3)}</SwiperSlide>
+        </Swiper>
       </div>
     </section>
   );
@@ -17,7 +31,7 @@ const Section1 = () => {
 
 export default Section1;
 
-function slide() {
+function slide(img) {
   const bg = {
     background: "url('/images/banner.png') no-repeat",
     backgroundPosition: "right",
@@ -30,12 +44,7 @@ function slide() {
     >
       <div className="md:col-span-1">
         <Link href={"/"} className="flex items-center justify-center">
-          <Image
-            src={"/images/flower2.webp"}
-            width={400}
-            height={400}
-            className="rounded"
-          />
+          <Image src={img} width={400} height={400} className="rounded" />
         </Link>
       </div>
       <div className="md:col-span-2">
