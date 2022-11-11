@@ -33,3 +33,11 @@ a {
   @apply px-3 py-2 w-60 rounded-full block border border-slate-300 bg-white shadow-sm placeholder-slate-500;
   @apply focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500;
 }
+
+.footer-inpt {
+  @apply px-3 py-2 w-96 rounded-full block border border-slate-300 bg-white shadow-sm placeholder-slate-500;
+  @apply focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500;
+}
+.footer-button {
+  @apply mt-2 bg-orange-600 px-6 py-2 rounded-full text-white font-bold hover:bg-orange-500 cursor-pointer;
+}
