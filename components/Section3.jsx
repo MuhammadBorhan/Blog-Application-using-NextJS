@@ -6,35 +6,39 @@ import Link from "next/link";
 import { Avatar } from "@mui/material";
 import Image from "next/image";
 
-const Section2 = () => {
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import swiperCore, { Autoplay } from "swiper";
+
+const Section3 = () => {
+  swiperCore.use(Autoplay);
   return (
     <section className="py-12">
       <div className="container mx-auto md:px-20">
-        <h1 className="font-bold text-4xl pb-10 text-center">Latest Posts</h1>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {slide(image1)}
-          {slide(image1)}
-          {slide(image1)}
-          {slide(image1)}
-          {slide(image1)}
-          {slide(image1)}
-        </div>
+        <h1 className="font-bold text-4xl pb-10 text-center">Most Popular</h1>
+        <Swiper slidesPerView={2} loop={true} autoplay={{ delay: 2000 }}>
+          <SwiperSlide>{slide(image1)}</SwiperSlide>
+          <SwiperSlide>{slide(image1)}</SwiperSlide>
+          <SwiperSlide>{slide(image1)}</SwiperSlide>
+          <SwiperSlide>{slide(image1)}</SwiperSlide>
+        </Swiper>
       </div>
     </section>
   );
 };
 
-export default Section2;
+export default Section3;
 
 function slide(img) {
   return (
-    <div className="grid gap-y-5">
+    <div className="grid gap-y-10">
       <div>
         <Link href={"/"} className="flex items-center justify-center">
-          <Image src={img} className="rounded" />
+          <Image src={img} width={400} height={300} className="rounded" />
         </Link>
       </div>
-      <div>
+      <div className="px-20">
         <div className="cat">
           <Link href={"/"}>
             {" "}
