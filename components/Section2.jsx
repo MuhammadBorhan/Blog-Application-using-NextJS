@@ -1,53 +1,37 @@
-import { Repeat } from "@mui/icons-material";
-import { Avatar } from "@mui/material";
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import image1 from "../public/images/flower2.webp";
 import image2 from "../public/images/flower1.jpg";
 import image3 from "../public/images/flower3.jpg";
+import Link from "next/link";
+import { Avatar } from "@mui/material";
+import Image from "next/image";
 
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import swiperCore, { Autoplay } from "swiper";
-
-const Section1 = () => {
-  swiperCore.use(Autoplay);
+const Section2 = () => {
   return (
     <section className="py-12">
       <div className="container mx-auto md:px-20">
-        <h1 className="font-bold text-4xl pb-10 text-center">Trending</h1>
-
-        <Swiper slidesPerView={1} loop={true} autoplay={{ delay: 2000 }}>
-          <SwiperSlide>{slide(image1)}</SwiperSlide>
-          <SwiperSlide>{slide(image1)}</SwiperSlide>
-          <SwiperSlide>{slide(image1)}</SwiperSlide>
-        </Swiper>
+        <h1 className="font-bold text-4xl pb-10 text-center">Latest Posts</h1>
+        <div className="grid md:grid-cols-3 gap-10">
+          {slide(image1)}
+          {slide(image1)}
+          {slide(image1)}
+        </div>
       </div>
     </section>
   );
 };
 
-export default Section1;
+export default Section2;
 
 function slide(img) {
-  const bg = {
-    background: "url('/images/banner.png') no-repeat",
-    backgroundPosition: "right",
-    // backgroundSize: "cover",
-  };
   return (
-    <div
-      className="grid md:grid-cols-3 md:gap-x-6 gap-y-6 md:gap-y-0 items-center justify-center"
-      style={bg}
-    >
-      <div className="md:col-span-1">
+    <div className="grid gap-y-5">
+      <div>
         <Link href={"/"} className="flex items-center justify-center">
-          <Image src={img} width={400} height={400} className="rounded" />
+          <Image src={img} className="rounded" />
         </Link>
       </div>
-      <div className="md:col-span-2">
+      <div>
         <div className="cat">
           <Link href={"/"}>
             {" "}
@@ -64,7 +48,7 @@ function slide(img) {
           </Link>
         </div>
         <div className="title">
-          <p className="text-3xl md:text-5xl font-bold text-gray-600 hover:text-gray-400 text-justify">
+          <p className="text-xl md:text-2xl font-bold text-gray-600 hover:text-gray-400 text-justify">
             Your most unhappy customers are your greatest source of learning
           </p>
           <p className="py-3 text-gray-500 text-justify">
