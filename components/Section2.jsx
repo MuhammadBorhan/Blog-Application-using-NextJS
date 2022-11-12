@@ -5,8 +5,10 @@ import image3 from "../public/images/flower3.jpg";
 import Link from "next/link";
 import { Avatar } from "@mui/material";
 import Image from "next/image";
+import getPosts from "../lib/helper";
 
 const Section2 = () => {
+  getPosts(2).then((res) => console.log(res));
   return (
     <section className="py-12">
       <div className="container mx-auto md:px-20">
