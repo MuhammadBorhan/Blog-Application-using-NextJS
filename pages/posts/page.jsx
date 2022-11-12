@@ -35,10 +35,8 @@ const Page = () => {
         </div>
 
         <div>
-          <Link href={"/"}>
-            {" "}
-            <Image src={"/images/flower1.jpg"} width={600} height={300} />
-          </Link>
+          {" "}
+          <Image src={"/images/flower1.jpg"} width={600} height={300} />
         </div>
 
         <div className="pt-6">

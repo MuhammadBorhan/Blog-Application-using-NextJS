@@ -1,14 +1,19 @@
 import React from "react";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
+import styles from "../styles/Home.module.css";
+import Head from "next/head";
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <>
+      <Head>
+        <title>Blog</title>
+      </Head>
       <Header />
-      {children}
+      <main>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 };
 
